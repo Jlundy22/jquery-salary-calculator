@@ -14,6 +14,8 @@ function submitButtonClicked() {
     const idInput = $('#idInput').val();
     const titleInput = $('#titleInput').val();
     const salaryInput = $('#annualSalaryInput').val();
+    const monthlySalary = $('#annualSalaryInput').val() / 12;
+    //console.log('Monthy salary', monthlySalary)
     $('#employeeInfo').append(`
     <tr>
     <td>${firstNameInput}</td>
@@ -23,6 +25,7 @@ function submitButtonClicked() {
     <td>${salaryInput}</td>
     <td><button class="deleteButton">Delete</button></td>
     </tr>`);
+    $('#monthlyCost').append(monthlySalary);
       $('#firstNameInput').val('');
       $('#lastNameInput').val('');
       $('#idInput').val('');
