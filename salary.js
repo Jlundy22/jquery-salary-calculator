@@ -4,7 +4,8 @@ $(document).ready(readyNow);
 
 function readyNow() {
     console.log('jq');
-    $('#submitButton').on('click',submitButtonClicked)
+    $('#submitButton').on('click',submitButtonClicked);
+    $('table').on('click','.deleteButton', deleteEmployee);
 }
 
 function submitButtonClicked() {
@@ -20,6 +21,7 @@ function submitButtonClicked() {
     <td>${idInput}</td>
     <td>${titleInput}</td>
     <td>${salaryInput}</td>
+    <td><button class="deleteButton">Delete</button></td>
     </tr>`);
       $('#firstNameInput').val('');
       $('#lastNameInput').val('');
@@ -27,6 +29,12 @@ function submitButtonClicked() {
       $('#titleInput').val('');
       $('#annualSalaryInput').val('');
     
+}
+
+function deleteEmployee() {
+    console.log('DELETE')
+    const delete1 = $(this).closest("tr");
+    $(delete1).remove();
 }
 
 
