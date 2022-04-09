@@ -8,6 +8,16 @@ function readyNow() {
     $('table').on('click','.deleteButton', deleteEmployee);
 }
 
+const monthlySalaryArray = [];
+let sumOfAllEmployeeMonthlySalary = 0;
+function sumOfAllMonthlySalaries() {
+    for (let i=0; i < monthlySalaryArray.length; i++) {
+        sumOfAllEmployeeMonthlySalary += Number(monthlySalaryArray[i]);
+    }
+}
+
+
+
 function submitButtonClicked() {
     const firstNameInput = $('#firstNameInput').val();
     const lastNameInput = $('#lastNameInput').val();
@@ -15,6 +25,7 @@ function submitButtonClicked() {
     const titleInput = $('#titleInput').val();
     const salaryInput = $('#annualSalaryInput').val();
     const monthlySalary = $('#annualSalaryInput').val() / 12;
+    monthlySalaryArray.push(monthlySalary);
     //console.log('Monthy salary', monthlySalary)
     $('#employeeInfo').append(`
     <tr>
@@ -25,12 +36,21 @@ function submitButtonClicked() {
     <td>${salaryInput}</td>
     <td><button class="deleteButton">Delete</button></td>
     </tr>`);
-    $('#monthlyCost').append(monthlySalary);
+    $('#monthlyCost').append();
       $('#firstNameInput').val('');
       $('#lastNameInput').val('');
       $('#idInput').val('');
       $('#titleInput').val('');
       $('#annualSalaryInput').val('');
+    sumOfAllEmployeeMonthlySalary = 0; 
+
+    sumOfAllMonthlySalaries();
+
+    $('#monthlyCost').empty();
+    $('#monthlyCost').append(sumOfAllEmployeeMonthlySalary);
+    if (sumOfAllEmployeeMonthlySalary > 20000) {
+        $('#monthlyCost').addClass('red');
+    }  
     
 }
 

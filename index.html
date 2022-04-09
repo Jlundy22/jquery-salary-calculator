@@ -15,9 +15,9 @@
     <h2>Add Employee</h2>
     <input id="firstNameInput" placeholder="First Name">
     <input id="lastNameInput" placeholder="Last Name">
-    <input id="idInput" placeholder="ID">
+    <input id="idInput" placeholder="ID" type="number">
     <input id="titleInput" placeholder="Title">
-    <input id="annualSalaryInput" placeholder="Annual Salary">
+    <input id="annualSalaryInput" placeholder="Annual Salary" type="number">
     <button id="submitButton">Submit</button>
 </body>
 <table id="employeeInfo">
@@ -29,7 +29,5 @@
         <th>Annual Salary</th>
     </tr>
 </table>
-<h1 id="monthlyCost">
-    Total monthly:
-</h1>
+<div>Total monthly: <span id="monthlyCost"></span></div>
 </html>
