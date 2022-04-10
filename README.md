@@ -1,9 +1,11 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+JQUERY SALARY CALCULATOR
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This was the first big weekend project we had while at Prime Digital Acedemy. You are able to input info into the fields on screen. When you hit submit you will see the newly added info append to the screen along with a running total of monthly salary cost which has a $20,000 limit. Dont worry you will know when you are over budget.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+
+
+

@@ -35,7 +35,7 @@ function submitButtonClicked() {
     <td>${lastNameInput}</td>
     <td>${idInput}</td>
     <td>${titleInput}</td>
-    <td>${salaryInput}</td>
+    <td>$${salaryInput}</td>
     <td><button class="deleteButton">Delete</button></td>
     </tr>`);
     $('#monthlyCost').append();
@@ -49,7 +49,7 @@ function submitButtonClicked() {
     sumOfAllMonthlySalaries();
 
     $('#monthlyCost').empty();
-    $('#monthlyCost').append(sumOfAllEmployeeMonthlySalary);
+    $('#monthlyCost').append('$',sumOfAllEmployeeMonthlySalary.toFixed(2));
     if (sumOfAllEmployeeMonthlySalary > 20000) {
         $('#monthlyCost').addClass('red');
     }  

@@ -1,12 +1,20 @@
 h1 {
-    background-color: green;
+    background-color: lightgreen;
     text-align: center;
     
 }
 
+
  table, th, tr, td{
     border: 1px solid black;
     border-collapse: collapse;
+    
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 800px;
 }
 
 .red {
@@ -17,16 +25,24 @@ h1 {
 body {
     background-color: beige;
     margin: 0px;
+    text-align: center;
 }
- #submitButton {
-     background-color:  green;
- }
+
  tr {
-     background-color: grey;
+     background-color: rgb(168, 148, 148);
      text-align: center;
  }
 
  th {
-     background-color: aquamarine;
+     background-color: lightgray;
  }
 
+input {
+    background-color: rgb(152, 218, 196);
+}
+ h2 {
+     text-align: center;
+ }
+ footer {
+     margin-top: 500px;
+ }
