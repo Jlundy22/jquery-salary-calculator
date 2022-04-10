@@ -55,7 +55,6 @@ function submitButtonClicked() {
 }
 
 function deleteEmployee() {
-    console.log('DELETE')
     const delete1 = $(this).closest("tr");
     $(delete1).remove();
 }
