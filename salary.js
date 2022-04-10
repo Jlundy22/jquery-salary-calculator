@@ -7,7 +7,7 @@ function readyNow() {
     $('#submitButton').on('click',submitButtonClicked);
     $('table').on('click','.deleteButton', deleteEmployee);
 }
-
+// loops through all monthly salaries and add them up to append to the DOM 
 const monthlySalaryArray = [];
 let sumOfAllEmployeeMonthlySalary = 0;
 function sumOfAllMonthlySalaries() {
@@ -17,7 +17,6 @@ function sumOfAllMonthlySalaries() {
 }
 
 
-
 function submitButtonClicked() {
     const firstNameInput = $('#firstNameInput').val();
     const lastNameInput = $('#lastNameInput').val();
@@ -25,6 +24,9 @@ function submitButtonClicked() {
     const titleInput = $('#titleInput').val();
     const salaryInput = $('#annualSalaryInput').val();
     const monthlySalary = $('#annualSalaryInput').val() / 12;
+    if (firstNameInput === ''|| lastNameInput === ''|| idInput === ''|| titleInput === '' || salaryInput === '') {
+        return;
+    }
     monthlySalaryArray.push(monthlySalary);
     //console.log('Monthy salary', monthlySalary)
     $('#employeeInfo').append(`
